@@ -1,11 +1,11 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/archi/all/share/notes.org" . 36160)
+(("/home/archi/.emacs.d/"
+  (dired-filename . "/home/archi/.emacs.d/init.el"))
+ ("/home/archi/.emacs.d/init.el" . 8141)
+ ("/home/archi/all/share/emacs.org" . 24651)
+ ("/home/archi/.emacs.d/README.md" . 109)
+ ("/home/archi/all/share/notes.org" . 35501)
  ("/home/archi/all/share/"
   (dired-filename . "/home/archi/all/share/emacs.org"))
- ("/home/archi/.emacs.d/README.md" . 13)
- ("/home/archi/all/share/emacs.org" . 24580)
- ("/home/archi/.emacs.d/init.el" . 8006)
  ("/home/archi/testsql.sql" . 3)
- ("/home/archi/test.md" . 16)
- ("/home/archi/.emacs.d/"
-  (dired-filename . "/home/archi/.emacs.d/auto-save-list")))
+ ("/home/archi/test.md" . 16))

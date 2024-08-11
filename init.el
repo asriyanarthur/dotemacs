@@ -24,7 +24,7 @@
      ("melpa" . 20)))
  '(package-native-compile t)
  '(package-selected-packages
-   '(region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
+   '(helm-projectile helm region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil))
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
@@ -284,6 +284,74 @@ Markdownlint")
 ;;	( "$" . mc/edit-ends-of-lines)))
 
 ;;(region-bindings-mode-enable)
+
+(use-package region-bindings-mode
+  :ensure t)
+
+(region-bindings-mode-enable)
+
+(define-key region-bindings-mode-map "g" 'keyboard-quit)
+(define-key region-bindings-mode-map "a" 'mc/mark-all-like-this)
+(define-key region-bindings-mode-map "p" 'mc/mark-previous-like-this)
+(define-key region-bindings-mode-map "n" 'mc/mark-next-like-this)
+(define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
+(define-key region-bindings-mode-map "P" 'mc/unmark-previous-like-this)
+(define-key region-bindings-mode-map "N" 'mc/unmark-next-like-this)
+(define-key region-bindings-mode-map "[" 'mc/cycle-backward)
+(define-key region-bindings-mode-map "]" 'mc/cycle-forward)
+(define-key region-bindings-mode-map "h" 'mc-hide-unmatched-lines-mode)
+(define-key region-bindings-mode-map "\\" 'mc/vertical-align-with-space)
+(define-key region-bindings-mode-map "#" 'mc/insert-numbers) ; use num prefix to set the starting number
+(define-key region-bindings-mode-map "^" 'mc/edit-beginnings-of-lines)
+(define-key region-bindings-mode-map "$" 'mc/edit-ends-of-lines)
+  
+
+
+
+
+
+
+;; -> HELM
+;; https://github.com/emacs-helm/helm
+;; Подсказки и автодополнение ввода.
+;; [C-o] — переключение между источниками подсказок (история и полный список команд)
+(use-package helm
+:ensure t
+:diminish ""
+:config
+(helm-mode 1)
+:bind (:map global-map
+("C-x C-f" . helm-find-files)
+("C-x b" . helm-buffers-list)
+("M-x" . helm-M-x)
+("M-y" . helm-show-kill-ring)))
+
+
+;; -> HELM-PROJECTILE
+;; https://github.com/bbatsov/helm-projectile
+;; Интеграция HELM с PROJECTILE
+(use-package helm-projectile
+  :ensure t
+  :diminish ""
+  :requires (helm projectile)
+  :after (helm projectile)
+  :config
+  (helm-projectile-on))
+
+
+
+(use-package term
+  :bind (("C-c t" . term)
+         :map term-mode-map
+         ("M-p" . term-send-up)
+         ("M-n" . term-send-down)
+         :map term-raw-map
+         ("M-o" . other-window)
+         ("M-p" . term-send-up)
+         ("M-n" . term-send-down)))
+
+
+
 
 
 (provide 'init.el)
