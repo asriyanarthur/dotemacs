@@ -266,22 +266,24 @@ Markdownlint")
   (setq mc/insert-numbers-default 1))   
 
 
-(use-package region-bindings-mode
-  :ensure t
-  :bind(( "g" . keyboard-quit)
-	( "a" . mc/mark-all-like-this)
-	( "p" . mc/mark-previous-like-this)
-	( "n" . mc/mark-next-like-this)
-	( "m" . mc/mark-more-like-this-extended)
-	( "P" . mc/unmark-previous-like-this)	
-	( "N" . mc/unmark-next-like-this)
-	( "[" . mc/cycle-backward)
-	( "]" . mc/cycle-forward)
-	( "h" . mc-hide-unmatched-lines-mode)
-	( "\\". mc/vertical-align-with-space)
-	( "#" . mc/insert-numbers) 
-	( "^" . mc/edit-beginnings-of-lines)
-	( "$" . mc/edit-ends-of-lines)))
+;;(use-package region-bindings-mode
+;;  :ensure t
+;;  :bind(( "g" . keyboard-quit)
+;;	( "a" . mc/mark-all-like-this)
+;;	( "p" . mc/mark-previous-like-this)
+;;	( "n" . mc/mark-next-like-this)
+;;	( "m" . mc/mark-more-like-this-extended)
+;;	( "P" . mc/unmark-previous-like-this)	
+;;	( "N" . mc/unmark-next-like-this)
+;;	( "[" . mc/cycle-backward)
+;;	( "]" . mc/cycle-forward)
+;;	( "h" . mc-hide-unmatched-lines-mode)
+;;	( "\\". mc/vertical-align-with-space)
+;;	( "#" . mc/insert-numbers) 
+;;	( "^" . mc/edit-beginnings-of-lines)
+;;	( "$" . mc/edit-ends-of-lines)))
+
+;;(region-bindings-mode-enable)
 
 
 (provide 'init.el)
