@@ -23,7 +23,8 @@
      ("melpa-stable" . 30)
      ("melpa" . 20)))
  '(package-native-compile t)
- '(package-selected-packages '(markdown-mode))
+ '(package-selected-packages
+   '(region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil))
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
@@ -76,14 +77,211 @@
 
 
 
+(defconst default-font-height 14 "Размер шрифта по умолчанию.") 
+;; -> Настройки, специфичные для графического режима
+(defun setup-gui-settings (frame-name)
+"Настройки, необходимые при запуске EMACS в графической среде.
+FRAME-NAME — имя фрейма, который настраивается."
+(when (display-graphic-p frame-name)
+(global-font-lock-mode t) ;; Отображать шрифты красиво, используя Font Face's
+(defvar availiable-fonts (font-family-list)) ;; Какие есть семейства шрифтов?
+(defvar default-font-family nil "Шрифт по умолчанию.")
+;; Перебор шрифтов
+(cond
+((member "Fire Code Nerd" availiable-fonts)
+(setq default-font-family "Fira Code Nerd"))
+((member "Fira Code" availiable-fonts)
+(setq default-font-family "Fira Code"))
+((member "DejaVu Sans Mono Nerd" availiable-fonts)
+(setq default-font-family "DejaVu Sans Mono Nerd"))
+((member "DejaVu Sans Mono" availiable-fonts)
+(setq default-font-family "DejaVu Sans Mono"))
+((member "Source Code Pro" availiable-fonts)
+(setq default-font-family "Source Code Pro"))
+((member "Consolas" availiable-fonts)
+(setq default-font-family "Consolas")))
+(when default-font-family
+;; Это формат X Logical Font Description Conventions, XLFD
+;; https://www.x.org/releases/X11R7.7/doc/xorg-docs/xlfd/xlfd.html
+(set-frame-font
+(format "-*-%s-normal-normal-normal-*-%d-*-*-*-m-0-iso10646-1"
+default-font-family
+emacs-default-font-height) nil t)
+(set-face-attribute 'default nil :family default-font-family))
+(set-face-attribute 'default nil :height (* emacs-default-font-height 10))))
+;; Правильный способ определить, что EMACS запущен в графическом режиме. Подробнее здесь:
+;; https://emacsredux.com/blog/2022/06/03/detecting-whether-emacs-is-running-in-terminal-or-gui-mode/
+(add-to-list 'after-make-frame-functions #'setup-gui-settings)
 
 
 
 
 
+;; -> AUTOREVERT
+;; Встроенный пакет
+(use-package autorevert
+:hook
+(dired-mode . auto-revert-mode))
+
+
+;; -> DIRED
+;; Встроенный пакет для работы с файлами и каталогами.
+;; Клавиши:
+;; [+] - создание каталога.
+;; [C-x C-f] - создание файла с последующим открытием буфера.
+;;(use-package dired
+;;:custom
+;;(dired-kill-when-opening-new-dired-buffer t "Удалять буфер при переходе в другой каталог.")
+;;(dired-listing-switches "-lah --group-directories-first") "Каталоги в начале списка")
+
+
+;; -> NERD-ICONS-DIRED
+;; https://github.com/rainstormstudio/nerd-icons-dired
+;; Иконки в `dired'.
+(use-package nerd-icons-dired
+  :ensure t
+  :after (dired nerd-icons)
+  :hook (dired-mode . nerd-icons-dired-mode))
 
 
 
+(use-package elisp-mode
+	:config
+	(setq-local tab-width 2))
+
+
+;; -> PROJECTILE
+;; https://docs.projectile.mx/projectile/installation.html
+;; Управление проектами. Чтобы каталог считался проектом, он должен быть
+;; под контролем любой системы версионирования, либо содержать специальные
+;; файлы. В крайнем случае сгодится пустой файл .projectile
+;; Подробнее здесь: https://docs.projectile.mx/projectile/projects.html
+(use-package projectile
+:ensure t
+:diminish "PRJ"
+:bind-keymap
+("C-x p" . projectile-command-map)
+:config
+(projectile-mode 1))
+
+
+
+;; -> FLYMAKE
+;; Более свежая версия встроенного пакета из репозитория GNU
+;; Используется для проверки `init.el'.
+;; https://elpa.gnu.org/packages/flymake.html
+(use-package flymake
+:pin "gnu"
+:ensure t
+:hook
+((
+emacs-lisp-mode
+lisp-data-mode
+) . flymake-mode))
+
+;; -> FLYCHECK
+;; https://www.flycheck.org/
+;; Проверка синтаксиса на лету с помощью статических анализаторов
+(use-package flycheck
+	:pin "melpa-stable"
+	:ensure t
+	:defer t
+	:custom
+	(flycheck-check-syntax-automatically '(mode-enabled save new-line))
+	(flycheck-highlighting-mode 'lines "Стиль отображения проблемных мест — вся строка")
+	(flycheck-indication-mode 'left-fringe "Место размещения маркера ошибки — левая граница")
+	(flycheck-locate-config-file-functions '(
+																					 flycheck-locate-config-file-by-path
+																					 flycheck-locate-config-file-ancestor-directories
+																					 flycheck-locate-config-file-home))
+	(flycheck-markdown-markdownlint-cli-config "~/.emacs.d/.markdownlintrc" "Файл настроек
+Markdownlint")
+	(flycheck-textlint-config ".textlintrc.yaml" "Файл настроек Textlint")
+	:hook
+	((
+		adoc-mode
+		conf-mode
+		css-mode
+		dockerfile-mode
+		emacs-lisp-mode
+		js2-mode
+		json-mode
+		latex-mode
+		lisp-data-mode
+		makefile-mode
+		markdown-mode
+		nxml-mode
+		python-mode
+		rst-mode
+		ruby-mode
+		sh-mode
+		sql-mode
+		terraform-mode
+		web-mode
+		yaml-mode
+		) . flycheck-mode))
+
+
+
+;; -> MAGIT
+;; https://magit.vc/
+;; Magic + Git + Git-gutter. Лучшее средство для управления Git.
+(use-package magit
+	:pin "nongnu"
+	:ensure t
+	:defer t
+	:custom
+	(magit-define-global-key-bindings t "Включить глобальные сочетания Magit.")
+	:config
+	(add-hook 'after-save-hook 'magit-after-save-refresh-status t))
+
+
+;; -> MARKDOWN MODE
+;; https://github.com/jrblevin/markdown-mode
+;; Режим для работы с файлами в формате Markdown
+(use-package markdown-mode
+	:ensure t
+	:defer t
+	:custom
+	(markdown-fontify-code-blocks-natively t "Подсвечивать синтаксис в примерах кода")
+	(markdown-header-scaling-values '(1.0 1.0 1.0 1.0 1.0 1.0) "Все заголовки одной высоты")
+	(markdown-list-indent-width 4 "Размер отступа для выравнивания вложенных списков")
+	:config (setq-local word-wrap t)
+	:bind (
+				 :map markdown-mode-map
+				 ("M-." . markdown-follow-thing-at-point))
+	:mode ("\\.md\\'" . markdown-mode))
+
+
+(use-package multiple-cursors
+  :ensure t
+  :bind(("C-S-c C-S-c" . mc/edit-lines)
+        ("C->" . mc/mark-next-like-this)
+        ("C-<" . mc/mark-previous-like-this)
+        ("C-c C-<" . mc/mark-all-like-this)
+        ("C-c n" . mc/insert-numbers)
+	("C-c m" . mc/mark-all-in-region)
+	)
+  :config
+  (setq mc/insert-numbers-default 1))   
+
+
+(use-package region-bindings-mode
+  :ensure t
+  :bind(( "g" . keyboard-quit)
+	( "a" . mc/mark-all-like-this)
+	( "p" . mc/mark-previous-like-this)
+	( "n" . mc/mark-next-like-this)
+	( "m" . mc/mark-more-like-this-extended)
+	( "P" . mc/unmark-previous-like-this)	
+	( "N" . mc/unmark-next-like-this)
+	( "[" . mc/cycle-backward)
+	( "]" . mc/cycle-forward)
+	( "h" . mc-hide-unmatched-lines-mode)
+	( "\\". mc/vertical-align-with-space)
+	( "#" . mc/insert-numbers) 
+	( "^" . mc/edit-beginnings-of-lines)
+	( "$" . mc/edit-ends-of-lines)))
 
 
 (provide 'init.el)
