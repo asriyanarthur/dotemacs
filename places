@@ -1,11 +1,19 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/archi/.emacs.d/"
+(("/home/archi/tmp/"
+  (dired-filename . "/home/archi/tmp/cmd"))
+ ("/home/archi/tmp/Makefile" . 160)
+ ("/home/archi/.emacs.d/init.el" . 11840)
+ ("/home/archi/goproject/cmd/main.go" . 77)
+ ("/home/archi/goproject/main.go" . 43)
+ ("/home/archi/"
+  (dired-filename . "/home/archi/all"))
+ ("/home/archi/all/git/"
+  (dired-filename . "/home/archi/all/git/.."))
+ ("/home/archi/all/" . 339)
+ ("/home/archi/go/bin/"
+  (dired-filename . "/home/archi/go/bin/.."))
+ ("/home/archi/go/"
+  (dired-filename . "/home/archi/go/.."))
+ ("/home/archi/.emacs.d/"
   (dired-filename . "/home/archi/.emacs.d/init.el"))
- ("/home/archi/.emacs.d/init.el" . 8141)
- ("/home/archi/all/share/emacs.org" . 24651)
- ("/home/archi/.emacs.d/README.md" . 109)
- ("/home/archi/all/share/notes.org" . 35501)
- ("/home/archi/all/share/"
-  (dired-filename . "/home/archi/all/share/emacs.org"))
- ("/home/archi/testsql.sql" . 3)
- ("/home/archi/test.md" . 16))
+ ("/home/archi/.emacs.d/README.md" . 109))

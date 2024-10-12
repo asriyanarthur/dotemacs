@@ -24,7 +24,7 @@
      ("melpa" . 20)))
  '(package-native-compile t)
  '(package-selected-packages
-   '(helm-projectile helm region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
+   '(go-mode helm-projectile helm region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil))
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
@@ -337,6 +337,72 @@ Markdownlint")
   :after (helm projectile)
   :config
   (helm-projectile-on))
+
+
+;;(use-package go-mode
+;;  :ensure t
+;;  :mode "\\.go\\'")
+
+
+(setq treesit-language-source-alist
+   '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+     (cmake "https://github.com/uyha/tree-sitter-cmake")
+     (css "https://github.com/tree-sitter/tree-sitter-css")
+     (elisp "https://github.com/Wilfred/tree-sitter-elisp")
+     (go "https://github.com/tree-sitter/tree-sitter-go")
+     (html "https://github.com/tree-sitter/tree-sitter-html")
+     (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+     (json "https://github.com/tree-sitter/tree-sitter-json")
+     (make "https://github.com/alemuller/tree-sitter-make")
+     (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+     (python "https://github.com/tree-sitter/tree-sitter-python")
+     (toml "https://github.com/tree-sitter/tree-sitter-toml")
+     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
+
+;;(use-package X-mode
+;;  :init
+;;  (add-to-list 'treesit-language-source-alist '(X "https://github.com/tree-sitter/tree-sitter-X"))
+;;  ;; (treesit-install-language-grammar 'X)
+;;  (add-to-list 'major-mode-remap-alist '(X-mode . X-ts-mode))
+;;  ;; ...
+;;  )
+;;
+;;(use-package go-ts-mode
+;;  :hook
+;;  (go-ts-mode . lsp-deferred)
+;;  (go-ts-mode . go-format-on-save-mode)
+;;  :init
+;;  (add-to-list 'treesit-language-source-alist '(go "https://github.com/tree-sitter/tree-sitter-go"))
+;;  (add-to-list 'treesit-language-source-alist '(gomod "https://github.com/camdencheek/tree-sitter-go-mod"))
+;;  ;; (dolist (lang '(go gomod)) (treesit-install-language-grammar lang))
+;;  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+;;  (add-to-list 'auto-mode-alist '("/go\\.mod\\'" . go-mod-ts-mode))
+;;  :config
+;;  (reformatter-define go-format
+;;    :program "goimports"
+;;    :args '("/dev/stdin"))
+;;  ;;:general
+;;  ;; ...
+;;  )
+
+
+;;(use-package lsp-mode)
+;;
+;;;;(require 'lsp-mode)
+;;;;(require 'go-mode)
+;;
+;;(add-hook 'go-mode-hook 'lsp-deferred)
+;;(add-hook 'go-mode-hook 'subword-mode)
+;;(add-hook 'before-save-hook 'gofmt-before-save)
+;;
+;;(add-hook 'go-mode-hook (lambda ()
+;;                          (setq tab-width 4)
+;;                          (flycheck-add-next-checker 'lsp 'go-vet)
+;;                          (flycheck-add-next-checker 'lsp 'go-staticcheck)))
+
+
 
 
 
