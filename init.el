@@ -24,7 +24,7 @@
      ("melpa" . 20)))
  '(package-native-compile t)
  '(package-selected-packages
-   '(go-mode helm-projectile helm region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
+   '(lsp-mode go-mode helm-projectile helm region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil))
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
@@ -171,55 +171,55 @@ emacs-default-font-height) nil t)
 ;; Используется для проверки `init.el'.
 ;; https://elpa.gnu.org/packages/flymake.html
 (use-package flymake
-:pin "gnu"
-:ensure t
-:hook
-((
-emacs-lisp-mode
-lisp-data-mode
-) . flymake-mode))
+  :pin "gnu"
+  :ensure t
+  :hook
+  ((
+    emacs-lisp-mode
+    lisp-data-mode
+    ) . flymake-mode))
 
-;; -> FLYCHECK
-;; https://www.flycheck.org/
-;; Проверка синтаксиса на лету с помощью статических анализаторов
-(use-package flycheck
-	:pin "melpa-stable"
-	:ensure t
-	:defer t
-	:custom
-	(flycheck-check-syntax-automatically '(mode-enabled save new-line))
-	(flycheck-highlighting-mode 'lines "Стиль отображения проблемных мест — вся строка")
-	(flycheck-indication-mode 'left-fringe "Место размещения маркера ошибки — левая граница")
-	(flycheck-locate-config-file-functions '(
-																					 flycheck-locate-config-file-by-path
-																					 flycheck-locate-config-file-ancestor-directories
-																					 flycheck-locate-config-file-home))
-	(flycheck-markdown-markdownlint-cli-config "~/.emacs.d/.markdownlintrc" "Файл настроек
-Markdownlint")
-	(flycheck-textlint-config ".textlintrc.yaml" "Файл настроек Textlint")
-	:hook
-	((
-		adoc-mode
-		conf-mode
-		css-mode
-		dockerfile-mode
-		emacs-lisp-mode
-		js2-mode
-		json-mode
-		latex-mode
-		lisp-data-mode
-		makefile-mode
-		markdown-mode
-		nxml-mode
-		python-mode
-		rst-mode
-		ruby-mode
-		sh-mode
-		sql-mode
-		terraform-mode
-		web-mode
-		yaml-mode
-		) . flycheck-mode))
+;;;; -> FLYCHECK
+;;;; https://www.flycheck.org/
+;;;; Проверка синтаксиса на лету с помощью статических анализаторов
+;;(use-package flycheck
+;;  :pin "melpa-stable"
+;;  :ensure t
+;;  :defer t
+;;  :custom
+;;  (flycheck-check-syntax-automatically '(mode-enabled save new-line))
+;;  (flycheck-highlighting-mode 'lines "Стиль отображения проблемных мест — вся строка")
+;;  (flycheck-indication-mode 'left-fringe "Место размещения маркера ошибки — левая граница")
+;;  (flycheck-locate-config-file-functions '(
+;;					   flycheck-locate-config-file-by-path
+;;					   flycheck-locate-config-file-ancestor-directories
+;;					   flycheck-locate-config-file-home))
+;;  (flycheck-markdown-markdownlint-cli-config "~/.emacs.d/.markdownlintrc" "Файл настроек
+;;Markdownlint")
+;;  (flycheck-textlint-config ".textlintrc.yaml" "Файл настроек Textlint")
+;;  :hook
+;;  ((
+;;    adoc-mode
+;;    conf-mode
+;;    css-mode
+;;    dockerfile-mode
+;;    emacs-lisp-mode
+;;    js2-mode
+;;    json-mode
+;;    latex-mode
+;;    lisp-data-mode
+;;    makefile-mode
+;;    markdown-mode
+;;    nxml-mode
+;;    python-mode
+;;    rst-mode
+;;    ruby-mode
+;;    sh-mode
+;;    sql-mode
+;;    terraform-mode
+;;    web-mode
+;;    yaml-mode
+;;    ) . flycheck-mode))
 
 
 
@@ -386,6 +386,16 @@ Markdownlint")
 ;;  ;;:general
 ;;  ;; ...
 ;;  )
+
+;; (use-package flycheck
+;;  :ensure t)
+;; 
+;; (use-package lsp
+;;  :ensure t)
+;; 
+;; 
+;; (use-package lsp-mode
+;;  :ensure t)
 
 
 ;;(use-package lsp-mode)

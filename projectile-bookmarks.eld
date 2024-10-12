@@ -1,1 +1,1 @@
-("~/temp11/dotemacs/")
+("~/tmp/")

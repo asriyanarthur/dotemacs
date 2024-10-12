@@ -1,0 +1,7 @@
+gofmt 
+gofmt ./test.go 
+gofmt ./test.go -w
+gofmt -w ./test.go 
+gofmt -w ./test.go 
+go run ./test.go 
+go run ./test.go 
