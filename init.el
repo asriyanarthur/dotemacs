@@ -339,9 +339,13 @@ emacs-default-font-height) nil t)
   (helm-projectile-on))
 
 
-;;(use-package go-mode
-;;  :ensure t
-;;  :mode "\\.go\\'")
+(use-package go-mode
+  :ensure t
+  :mode "\\.go\\'")
+
+(add-hook 'go-mode-hook 'lsp-deferred)
+(add-hook 'before-save-hook 'gofmt-before-save)
+
 
 
 (setq treesit-language-source-alist
@@ -383,9 +387,12 @@ emacs-default-font-height) nil t)
 ;;  (reformatter-define go-format
 ;;    :program "goimports"
 ;;    :args '("/dev/stdin"))
-;;  ;;:general
+;;;;:general
 ;;  ;; ...
 ;;  )
+
+
+
 
 ;; (use-package flycheck
 ;;  :ensure t)

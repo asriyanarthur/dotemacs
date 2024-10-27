@@ -1,5 +1,12 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/archi/.emacs.d/init.el" . 6361)
+(("/home/archi/all/git/testgit/"
+  (dired-filename . "/home/archi/all/git/testgit/cmd"))
+ ("/home/archi/all/git/testgit/cmd/"
+  (dired-filename . "/home/archi/all/git/testgit/cmd/tst"))
+ ("/home/archi/all/git/testgit/cmd/tst/"
+  (dired-filename . "/home/archi/all/git/testgit/cmd/tst/main.go"))
+ ("/home/archi/all/git/testgit/cmd/tst/main.go" . 72)
+ ("/home/archi/.emacs.d/init.el" . 11971)
  ("/home/archi/.emacs.d/"
   (dired-filename . "/home/archi/.emacs.d/init.el"))
  ("/home/archi/"
