@@ -2,23 +2,9 @@
 (("/home/archi/.emacs.d/init.el" . 6361)
  ("/home/archi/.emacs.d/"
   (dired-filename . "/home/archi/.emacs.d/init.el"))
- ("/home/archi/tmp/cmd/"
-  (dired-filename . "/home/archi/tmp/cmd/mainapp"))
- ("/home/archi/tmp/cmd/mainapp/"
-  (dired-filename . "/home/archi/tmp/cmd/mainapp/test.go"))
- ("/home/archi/tmp/cmd/mainapp/test.go" . 80)
- ("/home/archi/tmp/"
-  (dired-filename . "/home/archi/tmp/cmd"))
- ("/home/archi/tmp/Makefile" . 160)
- ("/home/archi/goproject/cmd/main.go" . 77)
- ("/home/archi/goproject/main.go" . 43)
  ("/home/archi/"
   (dired-filename . "/home/archi/all"))
  ("/home/archi/all/git/"
   (dired-filename . "/home/archi/all/git/.."))
  ("/home/archi/all/" . 339)
- ("/home/archi/go/bin/"
-  (dired-filename . "/home/archi/go/bin/.."))
- ("/home/archi/go/"
-  (dired-filename . "/home/archi/go/.."))
  ("/home/archi/.emacs.d/README.md" . 109))
