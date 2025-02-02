@@ -1,7 +1,7 @@
 
 ;; -> PACKAGE
 ;; Встроенный пакет.
-;; Настройка архивов пакетов
+;; Настройка архивов пакетов 
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
