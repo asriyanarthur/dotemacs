@@ -18,13 +18,12 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(package-archive-priorities
-   '(("gnu" . 50)
-     ("nongnu" . 40)
-     ("melpa-stable" . 30)
-     ("melpa" . 20)))
+   '(("gnu" . 50) ("nongnu" . 40) ("melpa-stable" . 30) ("melpa" . 20)))
  '(package-native-compile t)
  '(package-selected-packages
-   '(lsp-mode go-mode helm-projectile helm region-bindings-mode multiple-cursors magit flycheck projectile nerd-icons-dired markdown-mode))
+   '(elfeed flycheck go-mode helm helm-projectile lsp-mode magit
+	    markdown-mode multiple-cursors nerd-icons-dired projectile
+	    region-bindings-mode))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil))
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
@@ -315,29 +314,29 @@ emacs-default-font-height) nil t)
 ;; https://github.com/emacs-helm/helm
 ;; Подсказки и автодополнение ввода.
 ;; [C-o] — переключение между источниками подсказок (история и полный список команд)
-(use-package helm
-:ensure t
-:diminish ""
-:config
-(helm-mode 1)
-:bind (:map global-map
-("C-x C-f" . helm-find-files)
-("C-x b" . helm-buffers-list)
-("M-x" . helm-M-x)
-("M-y" . helm-show-kill-ring)))
-
-
-;; -> HELM-PROJECTILE
-;; https://github.com/bbatsov/helm-projectile
-;; Интеграция HELM с PROJECTILE
-(use-package helm-projectile
-  :ensure t
-  :diminish ""
-  :requires (helm projectile)
-  :after (helm projectile)
-  :config
-  (helm-projectile-on))
-
+;; (use-package helm
+;; :ensure t
+;; :diminish ""
+;; :config
+;; (helm-mode 1)
+;; :bind (:map global-map
+;; ("C-x C-f" . helm-find-files)
+;; ("C-x b" . helm-buffers-list)
+;; ("M-x" . helm-M-x)
+;; ("M-y" . helm-show-kill-ring)))
+;; 
+;; 
+;; ;; -> HELM-PROJECTILE
+;; ;; https://github.com/bbatsov/helm-projectile
+;; ;; Интеграция HELM с PROJECTILE
+;; (use-package helm-projectile
+;;   :ensure t
+;;   :diminish ""
+;;   :requires (helm projectile)
+;;   :after (helm projectile)
+;;   :config
+;;   (helm-projectile-on))
+;; 
 
 (use-package go-mode
   :ensure t
@@ -444,3 +443,15 @@ emacs-default-font-height) nil t)
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
+;; /storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed
+
+(add-to-list 'load-path "/storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed")
+
+(require 'elfeed)
+
+(setq elfeed-feeds
+      '("https://habr.com/ru/rss/hubs/emacs/articles/?fl=ru"))
+

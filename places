@@ -1,17 +1,17 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/archi/all/git/testgit/"
-  (dired-filename . "/home/archi/all/git/testgit/cmd"))
- ("/home/archi/all/git/testgit/cmd/"
-  (dired-filename . "/home/archi/all/git/testgit/cmd/tst"))
- ("/home/archi/all/git/testgit/cmd/tst/"
-  (dired-filename . "/home/archi/all/git/testgit/cmd/tst/main.go"))
- ("/home/archi/all/git/testgit/cmd/tst/main.go" . 72)
- ("/home/archi/.emacs.d/init.el" . 11971)
- ("/home/archi/.emacs.d/"
-  (dired-filename . "/home/archi/.emacs.d/init.el"))
- ("/home/archi/"
-  (dired-filename . "/home/archi/all"))
- ("/home/archi/all/git/"
-  (dired-filename . "/home/archi/all/git/.."))
- ("/home/archi/all/" . 339)
- ("/home/archi/.emacs.d/README.md" . 109))
+(("/storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed/"
+  (dired-filename
+   . "/storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed/Makefile"))
+ ("/storage/emulated/0/Download/all/"
+  (dired-filename . "/storage/emulated/0/Download/all/projects"))
+ ("/data/data/org.gnu.emacs/files/.emacs.d/init.el" . 13487)
+ ("/storage/emulated/0/Download/all/projects/"
+  (dired-filename . "/storage/emulated/0/Download/all/projects/assa"))
+ ("/storage/emulated/0/Download/all/projects/2025-01-26 emacs from source/"
+  (dired-filename
+   . "/storage/emulated/0/Download/all/projects/2025-01-26 emacs from source/emacs.org"))
+ ("/storage/emulated/0/Download/all/projects/2025-01-26 emacs from source/emacs.org"
+  . 3445)
+ ("/data/data/org.gnu.emacs/files/"
+  (dired-filename
+   . "/data/data/org.gnu.emacs/files/emacs-32b7b5f114f5ee050cd66602bbf6f8c0cc391674f3fd6456df1fcec39af4d565.pdmp")))

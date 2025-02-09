@@ -5,3 +5,11 @@ gofmt -w ./test.go
 gofmt -w ./test.go 
 go run ./test.go 
 go run ./test.go 
+ls
+ls -la
+top
+vmstat
+vmstat 1
+pwd
+pwd
+ls -l
