@@ -16,6 +16,13 @@
 (require 'use-package)
 
 
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (and custom-file
+           (file-exists-p custom-file))
+  (load custom-file nil :nomessage))
+
+
+
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (require 'menu-bar)
