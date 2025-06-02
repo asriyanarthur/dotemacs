@@ -1,8 +1,14 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/data/data/com.termux/files/home/.emacs.d/init.el" . 4219)
+(("/data/data/com.termux/files/home/"
+  (dired-filename . "/data/data/com.termux/files/home/.emacs.d"))
+ ("/data/data/com.termux/files/home/.emacs.d/manual/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/.emacs.d/manual/.."))
+ ("/data/data/com.termux/files/home/.emacs.d/.git/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/.emacs.d/.git/.."))
  ("/data/data/com.termux/files/home/.emacs.d/"
   (dired-filename
-   . "/data/data/com.termux/files/home/.emacs.d/makefile"))
- ("/data/data/com.termux/files/home/.emacs.d/makefile" . 51)
- ("/data/data/com.termux/files/home/"
-  (dired-filename . "/data/data/com.termux/files/home/.emacs.d")))
+   . "/data/data/com.termux/files/home/.emacs.d/init.el"))
+ ("/data/data/com.termux/files/home/.emacs.d/init.el" . 166)
+ ("/data/data/com.termux/files/home/.emacs.d/makefile" . 19))

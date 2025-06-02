@@ -10,9 +10,9 @@
 (package-initialize)
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
 ;; Проверка наличия пакета `use-package'
-(unless (package-installed-p 'use-package)
-(package-refresh-contents)
-(package-install 'use-package t))
+;;(unless (package-installed-p 'use-package)
+;;(package-refresh-contents)
+;;(package-install 'use-package t))
 (require 'use-package)
 
 
