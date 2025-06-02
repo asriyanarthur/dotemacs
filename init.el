@@ -8,24 +8,6 @@
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
 (package-initialize)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t)
- '(initial-scratch-message nil)
- '(make-backup-files nil)
- '(menu-bar-mode nil)
- '(package-archive-priorities
-   '(("gnu" . 50) ("nongnu" . 40) ("melpa-stable" . 30) ("melpa" . 20)))
- '(package-native-compile t)
- '(package-selected-packages
-   '(elfeed flycheck go-mode helm helm-projectile lsp-mode magit
-	    markdown-mode multiple-cursors nerd-icons-dired projectile
-	    region-bindings-mode))
- '(ring-bell-function #'ignore)
- '(scroll-bar-mode nil))
 (add-to-list 'package-pinned-packages '("use-package" . "gnu"))
 ;; Проверка наличия пакета `use-package'
 (unless (package-installed-p 'use-package)
@@ -38,24 +20,13 @@
 
 (require 'menu-bar)
 
-
-
-
-
-
 (require 'scroll-bar)
-
-
-
-
 
 ;; -> SAVEPLACE
 ;; Встроенный пакет.
 ;; Восстанавливает позицию курсора в файле при его открытии.
 (require 'saveplace)
 (save-place-mode 1)
-
-
 
 
 ;;-> DELSEL
@@ -65,15 +36,9 @@
 (delete-selection-mode t) ;; Удалять выделенный фрагмент при вводе текста
 
 
-
-
-
-
 (use-package markdown-mode
 :ensure t
 :pin "melpa-stable")
-
-
 
 
 (defconst default-font-height 14 "Размер шрифта по умолчанию.") 
@@ -82,45 +47,42 @@
 "Настройки, необходимые при запуске EMACS в графической среде.
 FRAME-NAME — имя фрейма, который настраивается."
 (when (display-graphic-p frame-name)
-(global-font-lock-mode t) ;; Отображать шрифты красиво, используя Font Face's
-(defvar availiable-fonts (font-family-list)) ;; Какие есть семейства шрифтов?
-(defvar default-font-family nil "Шрифт по умолчанию.")
-;; Перебор шрифтов
-(cond
-((member "Fire Code Nerd" availiable-fonts)
-(setq default-font-family "Fira Code Nerd"))
-((member "Fira Code" availiable-fonts)
-(setq default-font-family "Fira Code"))
-((member "DejaVu Sans Mono Nerd" availiable-fonts)
-(setq default-font-family "DejaVu Sans Mono Nerd"))
-((member "DejaVu Sans Mono" availiable-fonts)
-(setq default-font-family "DejaVu Sans Mono"))
-((member "Source Code Pro" availiable-fonts)
-(setq default-font-family "Source Code Pro"))
-((member "Consolas" availiable-fonts)
-(setq default-font-family "Consolas")))
-(when default-font-family
-;; Это формат X Logical Font Description Conventions, XLFD
-;; https://www.x.org/releases/X11R7.7/doc/xorg-docs/xlfd/xlfd.html
-(set-frame-font
-(format "-*-%s-normal-normal-normal-*-%d-*-*-*-m-0-iso10646-1"
-default-font-family
-emacs-default-font-height) nil t)
-(set-face-attribute 'default nil :family default-font-family))
-(set-face-attribute 'default nil :height (* emacs-default-font-height 10))))
+  (global-font-lock-mode t) ;; Отображать шрифты красиво, используя Font Face's
+  (defvar availiable-fonts (font-family-list)) ;; Какие есть семейства шрифтов?
+  (defvar default-font-family nil "Шрифт по умолчанию.")
+  ;; Перебор шрифтов
+  (cond
+   ((member "Fire Code Nerd" availiable-fonts)
+    (setq default-font-family "Fira Code Nerd"))
+   ((member "Fira Code" availiable-fonts)
+    (setq default-font-family "Fira Code"))
+   ((member "DejaVu Sans Mono Nerd" availiable-fonts)
+    (setq default-font-family "DejaVu Sans Mono Nerd"))
+   ((member "DejaVu Sans Mono" availiable-fonts)
+    (setq default-font-family "DejaVu Sans Mono"))
+   ((member "Source Code Pro" availiable-fonts)
+    (setq default-font-family "Source Code Pro"))
+   ((member "Consolas" availiable-fonts)
+    (setq default-font-family "Consolas")))
+  (when default-font-family
+    ;; Это формат X Logical Font Description Conventions, XLFD
+    ;; https://www.x.org/releases/X11R7.7/doc/xorg-docs/xlfd/xlfd.html
+    (set-frame-font
+     (format "-*-%s-normal-normal-normal-*-%d-*-*-*-m-0-iso10646-1"
+	     default-font-family
+	     emacs-default-font-height) nil t)
+    (set-face-attribute 'default nil :family default-font-family))
+  (set-face-attribute 'default nil :height (* emacs-default-font-height 10))))
 ;; Правильный способ определить, что EMACS запущен в графическом режиме. Подробнее здесь:
 ;; https://emacsredux.com/blog/2022/06/03/detecting-whether-emacs-is-running-in-terminal-or-gui-mode/
 (add-to-list 'after-make-frame-functions #'setup-gui-settings)
 
 
-
-
-
 ;; -> AUTOREVERT
 ;; Встроенный пакет
 (use-package autorevert
-:hook
-(dired-mode . auto-revert-mode))
+  :hook
+  (dired-mode . auto-revert-mode))
 
 
 ;; -> DIRED
@@ -143,7 +105,6 @@ emacs-default-font-height) nil t)
   :hook (dired-mode . nerd-icons-dired-mode))
 
 
-
 (use-package elisp-mode
 	:config
 	(setq-local tab-width 2))
@@ -162,8 +123,6 @@ emacs-default-font-height) nil t)
 ("C-x p" . projectile-command-map)
 :config
 (projectile-mode 1))
-
-
 
 ;; -> FLYMAKE
 ;; Более свежая версия встроенного пакета из репозитория GNU
@@ -303,11 +262,6 @@ emacs-default-font-height) nil t)
 (define-key region-bindings-mode-map "#" 'mc/insert-numbers) ; use num prefix to set the starting number
 (define-key region-bindings-mode-map "^" 'mc/edit-beginnings-of-lines)
 (define-key region-bindings-mode-map "$" 'mc/edit-ends-of-lines)
-  
-
-
-
-
 
 
 ;; -> HELM
@@ -338,13 +292,12 @@ emacs-default-font-height) nil t)
 ;;   (helm-projectile-on))
 ;; 
 
-(use-package go-mode
-  :ensure t
-  :mode "\\.go\\'")
+;;(use-package go-mode
+;;  :ensure t
+;;  :mode "\\.go\\'")
 
-(add-hook 'go-mode-hook 'lsp-deferred)
-(add-hook 'before-save-hook 'gofmt-before-save)
-
+;;(add-hook 'go-mode-hook 'lsp-deferred)
+;;(add-hook 'before-save-hook 'gofmt-before-save)
 
 
 (setq treesit-language-source-alist
@@ -432,10 +385,6 @@ emacs-default-font-height) nil t)
          ("M-p" . term-send-up)
          ("M-n" . term-send-down)))
 
-
-
-
-
 (provide 'init.el)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -443,15 +392,4 @@ emacs-default-font-height) nil t)
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-
-;; /storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed
-
-(add-to-list 'load-path "/storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed")
-
-(require 'elfeed)
-
-(setq elfeed-feeds
-      '("https://habr.com/ru/rss/hubs/emacs/articles/?fl=ru"))
 

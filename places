@@ -1,17 +1,7 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed/"
+(("/data/data/com.termux/files/home/.emacs.d/init.el" . 3588)
+ ("/data/data/com.termux/files/home/"
+  (dired-filename . "/data/data/com.termux/files/home/.emacs.d"))
+ ("/data/data/com.termux/files/home/.emacs.d/"
   (dired-filename
-   . "/storage/emulated/0/Download/all/tmp/git/dotemacs/manual/elfeed/Makefile"))
- ("/storage/emulated/0/Download/all/"
-  (dired-filename . "/storage/emulated/0/Download/all/projects"))
- ("/data/data/org.gnu.emacs/files/.emacs.d/init.el" . 13487)
- ("/storage/emulated/0/Download/all/projects/"
-  (dired-filename . "/storage/emulated/0/Download/all/projects/assa"))
- ("/storage/emulated/0/Download/all/projects/2025-01-26 emacs from source/"
-  (dired-filename
-   . "/storage/emulated/0/Download/all/projects/2025-01-26 emacs from source/emacs.org"))
- ("/storage/emulated/0/Download/all/projects/2025-01-26 emacs from source/emacs.org"
-  . 3445)
- ("/data/data/org.gnu.emacs/files/"
-  (dired-filename
-   . "/data/data/org.gnu.emacs/files/emacs-32b7b5f114f5ee050cd66602bbf6f8c0cc391674f3fd6456df1fcec39af4d565.pdmp")))
+   . "/data/data/com.termux/files/home/.emacs.d/init.el")))
