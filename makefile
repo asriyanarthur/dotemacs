@@ -1,2 +1,2 @@
 all:
-	git add . && git commit -m "fix" && git push
+	git pull && git add . && git commit -m "fix" && git push
