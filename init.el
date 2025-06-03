@@ -134,7 +134,7 @@ FRAME-NAME — имя фрейма, который настраивается."
   :ensure t
   :diminish "PRJ"
   :bind-keymap
-  ("C-c p" . projectile-command-map)
+  ("C-x p" . projectile-command-map)
   :config
   (projectile-mode 1))
 
@@ -328,13 +328,6 @@ FRAME-NAME — имя фрейма, который настраивается."
 ;;   (helm-projectile-on))
 ;; 
 
-;;(use-package go-mode
-;;  :ensure t
-;;  :mode "\\.go\\'")
-
-;;(add-hook 'go-mode-hook 'lsp-deferred)
-;;(add-hook 'before-save-hook 'gofmt-before-save)
-
 
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
@@ -411,15 +404,15 @@ FRAME-NAME — имя фрейма, который настраивается."
 
 
 
-(use-package term
-  :bind (("C-c t" . term)
-         :map term-mode-map
-         ("M-p" . term-send-up)
-         ("M-n" . term-send-down)
-         :map term-raw-map
-         ("M-o" . other-window)
-         ("M-p" . term-send-up)
-         ("M-n" . term-send-down)))
+;;(use-package term
+;;  :bind (("C-c t" . term)
+;;         :map term-mode-map
+;;         ("M-p" . term-send-up)
+;;         ("M-n" . term-send-down)
+;;         :map term-raw-map
+;;         ("M-o" . other-window)
+;;         ("M-p" . term-send-up)
+;;         ("M-n" . term-send-down)))
 
 
 ;;; init.el --- GNU Emacs config ;;; Commentary:
@@ -431,7 +424,9 @@ FRAME-NAME — имя фрейма, который настраивается."
 (keymap-global-set "C-z" #'undo)
 
 
-
+(package-vc-install
+ '(helm   :url "https://github.com/emacs-helm/helm.git"
+	  :branch "v4.0"))
 
 (provide 'init.el)
 
