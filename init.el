@@ -21,8 +21,15 @@
            (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 
+;; Псевдонимы для yes и no
 
-(defalias 'yes-or-no-p 'y-or-n-p)
+(customize-set-variable 'use-short-answers t "y и n вместо yes и no")
+;; (defalias 'yes-or-no-p 'y-or-n-p)
+
+;;(setq default-input-method "russian-computer")
+;; установить дополнительный язык для переключения через C-\
+(customize-set-variable 'default-input-method "russian-computer")
+
 
 (require 'menu-bar)
 
@@ -126,7 +133,7 @@ FRAME-NAME — имя фрейма, который настраивается."
   :ensure t
   :diminish "PRJ"
   :bind-keymap
-  ("C-x p" . projectile-command-map)
+  ("C-c p" . projectile-command-map)
   :config
   (projectile-mode 1))
 
@@ -217,6 +224,11 @@ FRAME-NAME — имя фрейма, который настраивается."
   :mode ("\\.md\\'" . markdown-mode))
 
 
+;;(use-package reverse-im
+;;  :ensure t :custom
+;; (reverse-im-input-methods '("russian-computer"))
+;;  :config  (reverse-im-mode 1))
+
 (use-package multiple-cursors
   :ensure t
   :bind(("C-S-c C-S-c" . mc/edit-lines)
@@ -228,6 +240,7 @@ FRAME-NAME — имя фрейма, который настраивается."
 	)
   :config
   (setq mc/insert-numbers-default 1))   
+
 
 
 ;;(use-package region-bindings-mode
@@ -391,5 +404,19 @@ FRAME-NAME — имя фрейма, который настраивается."
          ("M-p" . term-send-up)
          ("M-n" . term-send-down)))
 
+
+;;; init.el --- GNU Emacs config ;;; Commentary:
+;;; Настройки GNU Emacs для работы техническим писателем.
+;;; Code:
+(require 'keymap)
+(keymap-global-unset "C-z")
+(keymap-global-unset "C-x C-z")
+(keymap-global-set "C-z" #'undo)
+
+
+
+
 (provide 'init.el)
+
+
 

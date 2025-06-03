@@ -1,5 +1,5 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/data/data/com.termux/files/home/.emacs.d/init.el" . 4455)
+(("/data/data/com.termux/files/home/.emacs.d/init.el" . 1097)
  ("/data/data/com.termux/files/home/.emacs.d/"
   (dired-filename . "/data/data/com.termux/files/home/.emacs.d/eshell"))
  ("/data/data/com.termux/files/home/dotemacs/"
