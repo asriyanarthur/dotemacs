@@ -5,7 +5,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(counsel flycheck go-mode helm helm-projectile lv magit markdown-mode
+   '(counsel erlang flycheck go-mode helm helm-projectile
+	     ivy-erlang-complete lv magit markdown-mode
 	     multiple-cursors nerd-icons-dired region-bindings-mode
 	     reverse-im))
  '(package-vc-selected-packages
