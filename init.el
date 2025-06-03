@@ -194,6 +194,22 @@ FRAME-NAME — имя фрейма, который настраивается."
 ;;    ) . flycheck-mode))
 
 
+;; DISPLAY-LINE-NUMBERS-MODE ;; Встроенный пакет.
+;; Показывает номера строк.
+(use-package display-line-numbers
+  :hook
+  ((adoc-mode
+    conf-mode
+    markdown-mode
+    nxml-mode
+    rst-mode
+    ) . display-line-numbers-mode))
+
+
+;; Отключить создание резервных копий
+(require 'files)
+(customize-set-variable 'make-backup-files nil "Отключить создание резервных копий")
+
 
 ;; -> MAGIT
 ;; https://magit.vc/
