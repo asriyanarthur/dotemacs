@@ -1,0 +1,4 @@
+;;; -*- lisp-data -*-
+(("/data/data/com.termux/files/home/.emacs.d/")
+ ("/data/data/com.termux/files/home/.emacs.d/elpa/helm/")
+ ("/data/data/com.termux/files/home/dotemacs/"))
