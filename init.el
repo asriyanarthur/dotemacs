@@ -34,6 +34,7 @@
 (require 'menu-bar)
 
 (require 'scroll-bar)
+(customize-set-variable 'scroll-bar-mode nil "Отключить полосы прокрутки")
 
 ;; -> SAVEPLACE
 ;; Встроенный пакет.
