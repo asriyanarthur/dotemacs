@@ -22,7 +22,6 @@
   (load custom-file nil :nomessage))
 
 
-
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (require 'menu-bar)
@@ -44,42 +43,42 @@
 
 
 (use-package markdown-mode
-:ensure t
-:pin "melpa-stable")
+  :ensure t
+  :pin "melpa-stable")
 
 
 (defconst default-font-height 14 "Размер шрифта по умолчанию.") 
 ;; -> Настройки, специфичные для графического режима
 (defun setup-gui-settings (frame-name)
-"Настройки, необходимые при запуске EMACS в графической среде.
+  "Настройки, необходимые при запуске EMACS в графической среде.
 FRAME-NAME — имя фрейма, который настраивается."
-(when (display-graphic-p frame-name)
-  (global-font-lock-mode t) ;; Отображать шрифты красиво, используя Font Face's
-  (defvar availiable-fonts (font-family-list)) ;; Какие есть семейства шрифтов?
-  (defvar default-font-family nil "Шрифт по умолчанию.")
-  ;; Перебор шрифтов
-  (cond
-   ((member "Fire Code Nerd" availiable-fonts)
-    (setq default-font-family "Fira Code Nerd"))
-   ((member "Fira Code" availiable-fonts)
-    (setq default-font-family "Fira Code"))
-   ((member "DejaVu Sans Mono Nerd" availiable-fonts)
-    (setq default-font-family "DejaVu Sans Mono Nerd"))
-   ((member "DejaVu Sans Mono" availiable-fonts)
-    (setq default-font-family "DejaVu Sans Mono"))
-   ((member "Source Code Pro" availiable-fonts)
-    (setq default-font-family "Source Code Pro"))
-   ((member "Consolas" availiable-fonts)
-    (setq default-font-family "Consolas")))
-  (when default-font-family
-    ;; Это формат X Logical Font Description Conventions, XLFD
-    ;; https://www.x.org/releases/X11R7.7/doc/xorg-docs/xlfd/xlfd.html
-    (set-frame-font
-     (format "-*-%s-normal-normal-normal-*-%d-*-*-*-m-0-iso10646-1"
-	     default-font-family
-	     emacs-default-font-height) nil t)
-    (set-face-attribute 'default nil :family default-font-family))
-  (set-face-attribute 'default nil :height (* emacs-default-font-height 10))))
+  (when (display-graphic-p frame-name)
+    (global-font-lock-mode t) ;; Отображать шрифты красиво, используя Font Face's
+    (defvar availiable-fonts (font-family-list)) ;; Какие есть семейства шрифтов?
+    (defvar default-font-family nil "Шрифт по умолчанию.")
+    ;; Перебор шрифтов
+    (cond
+     ((member "Fire Code Nerd" availiable-fonts)
+      (setq default-font-family "Fira Code Nerd"))
+     ((member "Fira Code" availiable-fonts)
+      (setq default-font-family "Fira Code"))
+     ((member "DejaVu Sans Mono Nerd" availiable-fonts)
+      (setq default-font-family "DejaVu Sans Mono Nerd"))
+     ((member "DejaVu Sans Mono" availiable-fonts)
+      (setq default-font-family "DejaVu Sans Mono"))
+     ((member "Source Code Pro" availiable-fonts)
+      (setq default-font-family "Source Code Pro"))
+     ((member "Consolas" availiable-fonts)
+      (setq default-font-family "Consolas")))
+    (when default-font-family
+      ;; Это формат X Logical Font Description Conventions, XLFD
+      ;; https://www.x.org/releases/X11R7.7/doc/xorg-docs/xlfd/xlfd.html
+      (set-frame-font
+       (format "-*-%s-normal-normal-normal-*-%d-*-*-*-m-0-iso10646-1"
+	       default-font-family
+	       emacs-default-font-height) nil t)
+      (set-face-attribute 'default nil :family default-font-family))
+    (set-face-attribute 'default nil :height (* emacs-default-font-height 10))))
 ;; Правильный способ определить, что EMACS запущен в графическом режиме. Подробнее здесь:
 ;; https://emacsredux.com/blog/2022/06/03/detecting-whether-emacs-is-running-in-terminal-or-gui-mode/
 (add-to-list 'after-make-frame-functions #'setup-gui-settings)
@@ -98,9 +97,9 @@ FRAME-NAME — имя фрейма, который настраивается."
 ;; [+] - создание каталога.
 ;; [C-x C-f] - создание файла с последующим открытием буфера.
 ;;(use-package dired
-;;:custom
-;;(dired-kill-when-opening-new-dired-buffer t "Удалять буфер при переходе в другой каталог.")
-;;(dired-listing-switches "-lah --group-directories-first") "Каталоги в начале списка")
+  ;;:custom
+  ;;(dired-kill-when-opening-new-dired-buffer t "Удалять буфер при переходе в другой каталог.")
+  ;;(dired-listing-switches "-lah --group-directories-first") "Каталоги в начале списка")
 
 
 ;; -> NERD-ICONS-DIRED
@@ -124,12 +123,12 @@ FRAME-NAME — имя фрейма, который настраивается."
 ;; файлы. В крайнем случае сгодится пустой файл .projectile
 ;; Подробнее здесь: https://docs.projectile.mx/projectile/projects.html
 (use-package projectile
-:ensure t
-:diminish "PRJ"
-:bind-keymap
-("C-x p" . projectile-command-map)
-:config
-(projectile-mode 1))
+  :ensure t
+  :diminish "PRJ"
+  :bind-keymap
+  ("C-x p" . projectile-command-map)
+  :config
+  (projectile-mode 1))
 
 ;; -> FLYMAKE
 ;; Более свежая версия встроенного пакета из репозитория GNU
@@ -192,30 +191,30 @@ FRAME-NAME — имя фрейма, который настраивается."
 ;; https://magit.vc/
 ;; Magic + Git + Git-gutter. Лучшее средство для управления Git.
 (use-package magit
-	:pin "nongnu"
-	:ensure t
-	:defer t
-	:custom
-	(magit-define-global-key-bindings t "Включить глобальные сочетания Magit.")
-	:config
-	(add-hook 'after-save-hook 'magit-after-save-refresh-status t))
+  :pin "nongnu"
+  :ensure t
+  :defer t
+  :custom
+  (magit-define-global-key-bindings t "Включить глобальные сочетания Magit.")
+  :config
+  (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
 
 
 ;; -> MARKDOWN MODE
 ;; https://github.com/jrblevin/markdown-mode
 ;; Режим для работы с файлами в формате Markdown
 (use-package markdown-mode
-	:ensure t
-	:defer t
-	:custom
-	(markdown-fontify-code-blocks-natively t "Подсвечивать синтаксис в примерах кода")
-	(markdown-header-scaling-values '(1.0 1.0 1.0 1.0 1.0 1.0) "Все заголовки одной высоты")
-	(markdown-list-indent-width 4 "Размер отступа для выравнивания вложенных списков")
-	:config (setq-local word-wrap t)
-	:bind (
-				 :map markdown-mode-map
-				 ("M-." . markdown-follow-thing-at-point))
-	:mode ("\\.md\\'" . markdown-mode))
+  :ensure t
+  :defer t
+  :custom
+  (markdown-fontify-code-blocks-natively t "Подсвечивать синтаксис в примерах кода")
+  (markdown-header-scaling-values '(1.0 1.0 1.0 1.0 1.0 1.0) "Все заголовки одной высоты")
+  (markdown-list-indent-width 4 "Размер отступа для выравнивания вложенных списков")
+  :config (setq-local word-wrap t)
+  :bind (
+	 :map markdown-mode-map
+	      ("M-." . markdown-follow-thing-at-point))
+  :mode ("\\.md\\'" . markdown-mode))
 
 
 (use-package multiple-cursors
@@ -393,10 +392,4 @@ FRAME-NAME — имя фрейма, который настраивается."
          ("M-n" . term-send-down)))
 
 (provide 'init.el)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
