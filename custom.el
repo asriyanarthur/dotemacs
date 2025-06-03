@@ -5,9 +5,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(flycheck go-mode helm helm-projectile lv magit markdown-mode
-	      multiple-cursors nerd-icons-dired region-bindings-mode
-	      reverse-im))
+   '(counsel flycheck go-mode helm helm-projectile lv magit markdown-mode
+	     multiple-cursors nerd-icons-dired region-bindings-mode
+	     reverse-im))
  '(package-vc-selected-packages
    '((helm :url "https://github.com/emacs-helm/helm.git" :branch "v4.0"))))
 (custom-set-faces

@@ -300,32 +300,32 @@ FRAME-NAME — имя фрейма, который настраивается."
 (define-key region-bindings-mode-map "$" 'mc/edit-ends-of-lines)
 
 
-;; -> HELM
-;; https://github.com/emacs-helm/helm
-;; Подсказки и автодополнение ввода.
-;; [C-o] — переключение между источниками подсказок (история и полный список команд)
- (use-package helm
-   :ensure t
-   :diminish ""
-   :config
-   (helm-mode 1)
-   :bind (:map global-map
-	       ("C-x C-f" . helm-find-files)
-	       ("C-x b" . helm-buffers-list)
-	       ("M-x" . helm-M-x)
-	       ("M-y" . helm-show-kill-ring)))
+;;;; -> HELM
+;;;; https://github.com/emacs-helm/helm
+;;;; Подсказки и автодополнение ввода.
+;;;; [C-o] — переключение между источниками подсказок (история и полный список команд)
+;; (use-package helm
+;;   :ensure t
+;;   :diminish ""
+;;   :config
+;;   (helm-mode 1)
+;;   :bind (:map global-map
+;;	       ("C-x C-f" . helm-find-files)
+;;	       ("C-x b" . helm-buffers-list)
+;;	       ("M-x" . helm-M-x)
+;;	       ("M-y" . helm-show-kill-ring)))
+;;;; 
 ;; 
-;; 
- ;; -> HELM-PROJECTILE
- ;; https://github.com/bbatsov/helm-projectile
- ;; Интеграция HELM с PROJECTILE
- (use-package helm-projectile
-   :ensure t
-   :diminish ""
-   :requires (helm projectile)
-   :after (helm projectile)
-   :config
-   (helm-projectile-on))
+;;;; -> HELM-PROJECTILE
+;;;; https://github.com/bbatsov/helm-projectile
+;;;; Интеграция HELM с PROJECTILE
+;; (use-package helm-projectile
+;;   :ensure t
+;;   :diminish ""
+;;   :requires (helm projectile)
+;;   :after (helm projectile)
+;;   :config
+;;   (helm-projectile-on))
  
 
 
@@ -427,6 +427,8 @@ FRAME-NAME — имя фрейма, который настраивается."
 ;;(package-vc-install
 ;; '(helm   :url "https://github.com/emacs-helm/helm.git"
 ;;	  :branch "v4.0"))
+
+(ivy-mode 1)
 
 (provide 'init.el)
 
