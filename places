@@ -1,5 +1,13 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/data/data/com.termux/files/home/.emacs.d/init.el" . 13693)
+(("/data/data/com.termux/files/home/src/td/build/Makefile" . 2769)
+ ("/data/data/com.termux/files/home/src/2/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/src/2/chat_server.erl"))
+ ("/data/data/com.termux/files/home/src/2/chat_server.erl" . 963)
+ ("/data/data/com.termux/files/home/src/1/echo.erl" . 135)
+ ("/data/data/com.termux/files/home/src/2/clients_manager.erl" . 809)
+ ("/data/data/com.termux/files/home/.emacs.d/init.el" . 13714)
+ ("/data/data/com.termux/files/home/src/1/hello.erl" . 150)
  ("/data/data/com.termux/files/home/dotemacs/custom.el" . 10)
  ("/data/data/com.termux/files/usr/share/emacs/30.1/lisp/emacs-lisp/package-vc.el.gz"
   . 37941)
@@ -13,9 +21,7 @@
  ("/data/data/com.termux/files/home/dotemacs/"
   (dired-filename
    . "/data/data/com.termux/files/home/dotemacs/README.md"))
- ("/data/data/com.termux/files/home/src/1/echo.erl" . 9)
  ("/data/data/com.termux/files/home/src/1/" . 328)
- ("/data/data/com.termux/files/home/src/1/hello.erl" . 17)
  ("/data/data/com.termux/files/home/dotemacs/places" . 43)
  ("/data/data/com.termux/files/home/dotemacs/tree-sitter/"
   (dired-filename

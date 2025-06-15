@@ -1,2 +1,2 @@
 ;;   -*- mode: lisp-data; -*-
-(((index "3.2") . "/data/data/org.gnu.emacs/files/.emacs.d/org-persist/index.eld"))
+(((index "3.2") . "/data/data/com.termux/files/home/.emacs.d/org-persist/index.eld"))
