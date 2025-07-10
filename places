@@ -1,18 +1,69 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/data/data/com.termux/files/home/src/td/build/Makefile" . 2769)
+(("/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org"
+  . 5143)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org_archive"
+  . 935)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org"))
+ ("/data/data/com.termux/files/home/.emacs.d/init.el" . 13611)
+ ("/data/data/com.termux/files/home/src/svelte/1/static/"
+  (dired-filename . "/data/data/com.termux/files/home/src/svelte/1"))
+ ("/data/data/com.termux/files/home/src/svelte/1/.svelte-kit/"
+  (dired-filename . "/data/data/com.termux/files/home/src/svelte/1"))
+ ("/data/data/com.termux/files/home/src/svelte/1/node_modules/semver/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/src/svelte/1/node_modules"))
+ ("/data/data/com.termux/files/home/src/svelte/1/node_modules/vite/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/src/svelte/1/node_modules"))
+ ("/data/data/com.termux/files/home/src/svelte/1/node_modules/"
+  (dired-filename . "/data/data/com.termux/files/home/src/svelte/1"))
+ ("/data/data/com.termux/files/home/src/svelte/1/src/App.svelte" . 2)
+ ("/data/data/com.termux/files/home/src/svelte/1/src/lib/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/src/svelte/1/src"))
+ ("/data/data/com.termux/files/home/src/svelte/1/src/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/src/svelte/1/src/routes"))
+ ("/data/data/com.termux/files/home/src/svelte/1/src/routes/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/src/svelte/1/src/routes/+page.svelte"))
+ ("/data/data/com.termux/files/home/src/svelte/1/src/routes/+page.svelte"
+  . 419)
+ ("/data/data/com.termux/files/home/src/svelte/1/src/app.html" . 202)
+ ("/data/data/com.termux/files/home/src/svelte/1/node_modules/vite/client.d.ts"
+  . 4849)
+ ("/data/data/com.termux/files/home/src/svelte/1/node_modules/semver/index.js"
+  . 2147)
+ ("/data/data/com.termux/files/home/src/svelte/1/vite.config.js" . 2)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/sberdb.org"
+  . 112)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/home.org"
+  . 670)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/greenplum.org"
+  . 78395)
+ ("/data/data/com.termux/files/home/dotemacs/custom.el" . 10)
+ ("/data/data/com.termux/files/home/"
+  (dired-filename . "/data/data/com.termux/files/home/storage"))
+ ("/data/data/com.termux/files/home/storage/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/storage/downloads"))
+ ("/data/data/com.termux/files/home/.emacs.d/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/.emacs.d/init.el"))
+ ("/data/data/com.termux/files/home/src/3/pyt.py" . 88)
+ ("/data/data/com.termux/files/home/.emacs.d/makefile" . 19)
+ ("/data/data/com.termux/files/home/src/td/build/Makefile" . 2769)
  ("/data/data/com.termux/files/home/src/2/"
   (dired-filename
    . "/data/data/com.termux/files/home/src/2/chat_server.erl"))
  ("/data/data/com.termux/files/home/src/2/chat_server.erl" . 963)
  ("/data/data/com.termux/files/home/src/1/echo.erl" . 135)
  ("/data/data/com.termux/files/home/src/2/clients_manager.erl" . 809)
- ("/data/data/com.termux/files/home/.emacs.d/init.el" . 13714)
  ("/data/data/com.termux/files/home/src/1/hello.erl" . 150)
- ("/data/data/com.termux/files/home/dotemacs/custom.el" . 10)
  ("/data/data/com.termux/files/usr/share/emacs/30.1/lisp/emacs-lisp/package-vc.el.gz"
   . 37941)
- ("/data/data/com.termux/files/home/.emacs.d/"
-  (dired-filename . "/data/data/com.termux/files/home/.emacs.d/elpa"))
  ("/data/data/com.termux/files/home/.emacs.d/elpa/archives/"
   (dired-filename . "/data/data/com.termux/files/home/.emacs.d/elpa"))
  ("/data/data/com.termux/files/home/.emacs.d/elpa/"
@@ -27,10 +78,7 @@
   (dired-filename
    . "/data/data/com.termux/files/home/dotemacs/tree-sitter/libtree-sitter-elisp.so"))
  ("/data/data/com.termux/files/home/dotemacs/init.el" . 845)
- ("/data/data/com.termux/files/home/"
-  (dired-filename . "/data/data/com.termux/files/home/.emacs.d"))
  ("/data/data/com.termux/files/home/.emacs.d/manual/"
   (dired-filename . "/data/data/com.termux/files/home/.emacs.d"))
  ("/data/data/com.termux/files/home/.emacs.d/.git/"
-  (dired-filename . "/data/data/com.termux/files/home/.emacs.d"))
- ("/data/data/com.termux/files/home/.emacs.d/makefile" . 19))
+  (dired-filename . "/data/data/com.termux/files/home/.emacs.d")))

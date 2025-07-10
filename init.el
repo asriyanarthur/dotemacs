@@ -424,6 +424,17 @@ FRAME-NAME — имя фрейма, который настраивается."
 (keymap-global-set "C-z" #'undo)
 
 
+(setq org-src-tab-acts-natively t)
+
+;; 📦 CURSOR-UNDO
+;; https://elpa.gnu.org/packages/cursor-undo.html
+;; Отмена работает в том числе на перемещение курсора.
+(use-package cursor-undo
+  :ensure t
+  :pin "gnu"
+  :config (cursor-undo 1))
+
+
 ;;(package-vc-install
 ;; '(helm   :url "https://github.com/emacs-helm/helm.git"
 ;;	  :branch "v4.0"))
@@ -431,6 +442,9 @@ FRAME-NAME — имя фрейма, который настраивается."
 (ivy-mode 1)
 
 (provide 'init.el)
+
+
+
 
 
 
