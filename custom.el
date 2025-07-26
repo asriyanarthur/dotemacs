@@ -4,7 +4,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files '("~/storage/downloads/all/org/sbertask.org"))
+ '(org-agenda-files
+   '("~/storage/downloads/all/org/home.org"
+     "/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org"))
  '(package-selected-packages
    '(counsel cursor-undo erlang flycheck go-mode helm helm-projectile
 	     ivy-erlang-complete lv magit markdown-mode

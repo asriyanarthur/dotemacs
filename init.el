@@ -441,6 +441,11 @@ FRAME-NAME — имя фрейма, который настраивается."
 
 (ivy-mode 1)
 
+(defun org-agenda-inactive ()
+  (interactive)
+  (let ((org-agenda-include-inactive-timestamps t))
+    (org-agenda)))
+
 (provide 'init.el)
 
 

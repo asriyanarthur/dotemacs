@@ -1,12 +1,33 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
 (("/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org"
-  . 5143)
- ("/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org_archive"
-  . 935)
+  . 3734)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/home.org"
+  . 24228)
+ ("/data/data/com.termux/files/home/dotemacs/custom.el" . 10)
  ("/data/data/com.termux/files/home/storage/downloads/all/org/"
   (dired-filename
-   . "/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org"))
- ("/data/data/com.termux/files/home/.emacs.d/init.el" . 13611)
+   . "/data/data/com.termux/files/home/storage/downloads/all/org/.stfolder"))
+ ("/data/data/com.termux/files/home/storage/downloads/all/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/storage/downloads/all/books"))
+ ("/data/data/com.termux/files/home/storage/downloads/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/storage/downloads/tmp1"))
+ ("/data/data/com.termux/files/home/storage/downloads/tmp1/"
+  (dired-filename
+   . "/data/data/com.termux/files/home/storage/downloads/tmp1/index.html"))
+ ("/data/data/com.termux/files/home/storage/downloads/tmp1/index.html"
+  . 196)
+ ("/data/data/com.termux/files/home/src/5/index.html" . 144)
+ ("/data/data/com.termux/files/home/src/5/"
+  (dired-filename . "/data/data/com.termux/files/home/src"))
+ ("/data/data/com.termux/files/home/src/"
+  (dired-filename . "/data/data/com.termux/files/home/src/1"))
+ ("/data/data/com.termux/files/home/"
+  (dired-filename . "/data/data/com.termux/files/home/.erlang_history"))
+ ("/data/data/com.termux/files/home/.emacs.d/init.el" . 13811)
+ ("/data/data/com.termux/files/home/storage/downloads/all/org/sbertask.org_archive"
+  . 935)
  ("/data/data/com.termux/files/home/src/svelte/1/static/"
   (dired-filename . "/data/data/com.termux/files/home/src/svelte/1"))
  ("/data/data/com.termux/files/home/src/svelte/1/.svelte-kit/"
@@ -39,13 +60,8 @@
  ("/data/data/com.termux/files/home/src/svelte/1/vite.config.js" . 2)
  ("/data/data/com.termux/files/home/storage/downloads/all/org/sberdb.org"
   . 112)
- ("/data/data/com.termux/files/home/storage/downloads/all/org/home.org"
-  . 670)
  ("/data/data/com.termux/files/home/storage/downloads/all/org/greenplum.org"
   . 78395)
- ("/data/data/com.termux/files/home/dotemacs/custom.el" . 10)
- ("/data/data/com.termux/files/home/"
-  (dired-filename . "/data/data/com.termux/files/home/storage"))
  ("/data/data/com.termux/files/home/storage/"
   (dired-filename
    . "/data/data/com.termux/files/home/storage/downloads"))
