@@ -441,6 +441,7 @@ FRAME-NAME — имя фрейма, который настраивается."
 
 (ivy-mode 1)
 
+;; функция для запуска org-agenda с отображением неактивных таймстемпов
 (defun org-agenda-inactive ()
   (interactive)
   (let ((org-agenda-include-inactive-timestamps t))
