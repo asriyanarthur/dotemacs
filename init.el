@@ -424,33 +424,13 @@ FRAME-NAME — имя фрейма, который настраивается."
 (keymap-global-set "C-z" #'undo)
 
 
-(setq org-src-tab-acts-natively t)
-
-;; 📦 CURSOR-UNDO
-;; https://elpa.gnu.org/packages/cursor-undo.html
-;; Отмена работает в том числе на перемещение курсора.
-(use-package cursor-undo
-  :ensure t
-  :pin "gnu"
-  :config (cursor-undo 1))
-
-
 ;;(package-vc-install
 ;; '(helm   :url "https://github.com/emacs-helm/helm.git"
 ;;	  :branch "v4.0"))
 
 (ivy-mode 1)
 
-;; функция для запуска org-agenda с отображением неактивных таймстемпов
-(defun org-agenda-inactive ()
-  (interactive)
-  (let ((org-agenda-include-inactive-timestamps t))
-    (org-agenda)))
-
 (provide 'init.el)
-
-
-
 
 
 

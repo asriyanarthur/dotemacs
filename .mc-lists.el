@@ -3,10 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-	org-delete-char
 	org-end-of-line
-	org-force-self-insert
-	org-self-insert-command
 	))
 
 (setq mc/cmds-to-run-once
