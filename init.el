@@ -432,5 +432,5 @@ FRAME-NAME — имя фрейма, который настраивается."
 
 (provide 'init.el)
 
-
+(setq org-tags-exclude-from-inheritance '("project" "calendar" "reminder" "waiting" "plan" "next"))
 

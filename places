@@ -1,4 +1,72 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/Users/asriyanarthur/all/org/"
-  (dired-filename . "/Users/asriyanarthur/all/org/tmp.org"))
- ("/Users/asriyanarthur/all/org/tmp.org" . 159))
+(("/Users/asriyanarthur/.emacs.d/init.el" . 13813)
+ ("/Users/asriyanarthur/all/org/"
+  (dired-filename . "/Users/asriyanarthur/all/org/home.org"))
+ ("/Users/asriyanarthur/all/org/tmp.org" . 600)
+ ("/Users/asriyanarthur/all/org/home.org" . 22008)
+ ("/Users/asriyanarthur/.config/opencode/"
+  (dired-filename
+   . "/Users/asriyanarthur/.config/opencode/opencode.jsonc"))
+ ("/Users/asriyanarthur/.config/opencode/opencode.jsonc" . 298)
+ ("/Users/asriyanarthur/vibemessenger/"
+  (dired-filename . "/Users/asriyanarthur/vibemessenger/openspec"))
+ ("/Users/asriyanarthur/vibemessenger/openspec/specs/architecture/"
+  (dired-filename
+   . "/Users/asriyanarthur/vibemessenger/openspec/specs"))
+ ("/Users/asriyanarthur/vibemessenger/openspec/specs/"
+  (dired-filename . "/Users/asriyanarthur/vibemessenger/openspec"))
+ ("/Users/asriyanarthur/vibemessenger/openspec/"
+  (dired-filename
+   . "/Users/asriyanarthur/vibemessenger/openspec/specs"))
+ ("/Users/asriyanarthur/vibemessenger/openspec/specs/architecture/spec.md"
+  . 1340)
+ ("/Users/asriyanarthur/all/org/sbertask.org" . 249)
+ ("/Users/asriyanarthur/vibemessenger/.opencode/"
+  (dired-filename . "/Users/asriyanarthur/vibemessenger"))
+ ("/Users/asriyanarthur/.yandex/"
+  (dired-filename . "/Users/asriyanarthur"))
+ ("/Users/asriyanarthur/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp"))
+ ("/Users/asriyanarthur/vibeapp/specs/task-manager-spec.md" . 199)
+ ("/Users/asriyanarthur/vibeapp/.opencode/commands/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/.opencode"))
+ ("/Users/asriyanarthur/vibeapp/.opencode/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp"))
+ ("/Users/asriyanarthur/vibeapp/specs/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp"))
+ ("/Users/asriyanarthur/vibeapp/openspec/changes/archive/2026-07-09-setup-tech-stack/"
+  (dired-filename
+   . "/Users/asriyanarthur/vibeapp/openspec/changes/archive"))
+ ("/Users/asriyanarthur/vibeapp/openspec/changes/archive/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec/changes"))
+ ("/Users/asriyanarthur/vibeapp/openspec/specs/api-server/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec/specs"))
+ ("/Users/asriyanarthur/vibeapp/openspec/specs/org-parsing/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec/specs"))
+ ("/Users/asriyanarthur/vibeapp/openspec/specs/project-scaffold/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec/specs"))
+ ("/Users/asriyanarthur/vibeapp/openspec/specs/web-client/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec/specs"))
+ ("/Users/asriyanarthur/vibeapp/openspec/specs/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec"))
+ ("/Users/asriyanarthur/vibeapp/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec"))
+ ("/Users/asriyanarthur/vibeapp/openspec/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec/changes"))
+ ("/Users/asriyanarthur/vibeapp/openspec/changes/"
+  (dired-filename . "/Users/asriyanarthur/vibeapp/openspec"))
+ ("/Users/asriyanarthur/vibeapp/openspec/specs/api-server/spec.md"
+  . 2446)
+ ("/Users/asriyanarthur/vibeapp/openspec/changes/archive/2026-07-09-setup-tech-stack/design.md"
+  . 4310)
+ ("/Users/asriyanarthur/.yandex/clids-yabrowser.xml" . 4)
+ ("/Users/asriyanarthur/all/"
+  (dired-filename . "/Users/asriyanarthur/all/org"))
+ ("/Users/asriyanarthur/Downloads/ИИС-3/"
+  (dired-filename . "/Users/asriyanarthur/Downloads/ИИС-3/config.ini"))
+ ("/Users/asriyanarthur/Downloads/ИИС-3/config.ini" . 310)
+ ("/Users/asriyanarthur/Downloads/ИИС-3/iis3.py" . 5061)
+ ("/Users/asriyanarthur/all/org/home.org_archive" . 1160161)
+ ("/Users/asriyanarthur/all/secret/"
+  (dired-filename . "/Users/asriyanarthur/all/secret"))
+ ("/Library/KeyBindings/DefaultKeyBinding.dict" . 104))

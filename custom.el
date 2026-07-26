@@ -9,8 +9,7 @@
    '("aa92c5258e1777df4c5a937ad0babbad1ac01f6381b87df971bfe48a1b905b25"
      default))
  '(org-agenda-files
-   '("~/all/org/tmp.org"
-     "/Users/asriyanarthur/storage/downloads/all/org/home.org"))
+   '("~/all/org/home.org" "/Users/asriyanarthur/all/org/tmp.org"))
  '(package-selected-packages
    '(counsel erlang flycheck go-mode helm helm-projectile
 	     ivy-erlang-complete lv magit markdown-mode

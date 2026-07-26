@@ -3,10 +3,17 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	org-archive-subtree-default
+	org-beginning-of-line
+	org-ctrl-c-ctrl-c
 	org-end-of-line
+	org-return-and-maybe-indent
+	org-self-insert-command
+	org-shiftright
 	))
 
 (setq mc/cmds-to-run-once
       '(
 	helm-M-x
+	org-metaright
 	))
